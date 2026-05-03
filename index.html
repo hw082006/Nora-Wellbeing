@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nora Holistic Wellbeing | Facials, Lymphatic Drainage & Yoga · Ladywell, SE London</title>
-  <meta name="description" content="Holistic facials, lymphatic drainage massage, post-partum & post-op massage, and private yoga sessions for women in Ladywell, SE London."/>
+  <title>Nora Holistic Wellbeing | Womb Massage, Lymphatic Drainage &amp; Facials · Ladywell, SE London</title>
+  <meta name="description" content="Womb massage, fertility massage, lymphatic drainage and holistic facials for women in Ladywell, SE London. Mizan abdominal therapy, Brazilian MLD, Kobido and Indian facial massage."/>
   <link rel="canonical" href="https://www.norawellbeing.com/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.norawellbeing.com/"/>
-  <meta property="og:title" content="Nora Holistic Wellbeing | Ancient Wisdom · SE London"/>
-  <meta property="og:description" content="Holistic facials, lymphatic drainage & private yoga for women in Ladywell, SE London."/>
+  <meta property="og:title" content="Nora Holistic Wellbeing | Womb Massage &amp; Holistic Treatments · SE London"/>
+  <meta property="og:description" content="Womb massage, fertility massage, lymphatic drainage and holistic facials for women in Ladywell, SE London."/>
   <meta property="og:image" content="https://www.norawellbeing.com/logo.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -74,7 +74,7 @@
     .rituals-inner { max-width: 1100px; margin: 0 auto; }
     .rituals-header { text-align: center; margin-bottom: 4rem; }
     .rituals-header .thin-rule { margin: 0 auto 2rem; }
-    .rituals-image-banner { width: 100%; height: 380px; object-fit: cover; object-position: center 60%; display: block; margin-bottom: 4rem; }
+    .rituals-image-banner { width: 100%; height: 380px; object-fit: cover; object-position: center 40%; display: block; margin-bottom: 4rem; }
     .treatment-menu { background: var(--bark-dark); padding: 3rem; margin-bottom: 5rem; }
     .treatment-menu-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; color: var(--sand); margin-bottom: 2rem; text-align: center; opacity: 0.85; }
     .treatment-menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.6rem 2rem; }
@@ -82,6 +82,19 @@
     .treatment-menu-item::before { content: '✦'; color: var(--clay); font-size: 0.6rem; flex-shrink: 0; }
     .treatment-menu-item a { color: var(--sand); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; line-height: 1.8; }
     .treatment-menu-item a:hover { color: var(--clay); }
+
+    /* Womb card — parchment background, distinct from dark MLD cards */
+    .womb-card { background: var(--parchment); border: 1px solid rgba(196,149,106,0.25); padding: 4rem; margin-bottom: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .womb-image { width: 100%; height: 420px; object-fit: cover; object-position: center 30%; display: block; margin-bottom: 4rem; }
+    .womb-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--bark-dark); line-height: 1.15; margin-bottom: 0.5rem; }
+    .womb-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--warm-grey); margin-bottom: 1.5rem; }
+    .womb-description { font-size: 0.95rem; line-height: 1.9; color: var(--warm-grey); margin-bottom: 1.2rem; }
+    .womb-best-for { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95rem; color: var(--moss); margin-bottom: 1.5rem; line-height: 1.8; }
+    .womb-disclaimer { font-size: 0.75rem; font-style: italic; color: var(--warm-grey); opacity: 0.7; margin-top: 1.5rem; line-height: 1.6; }
+    .womb-price-block { background: var(--cream); padding: 1.2rem 1.5rem; border-left: 2px solid var(--clay); margin-bottom: 1rem; }
+    .womb-price { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--bark); font-weight: 300; }
+    .womb-price-label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); margin-bottom: 0.3rem; }
+    .womb-duration { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm-grey); margin-top: 0.2rem; }
 
     .ritual-card { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(196,149,106,0.2); align-items: start; }
     .ritual-card.reverse { grid-template-columns: 2fr 1fr; }
@@ -115,12 +128,6 @@
     .package-item:last-child { border-bottom: none; }
     .section-sub-heading { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--bark-dark); margin: 5rem 0 3rem; padding-top: 4rem; border-top: 1px solid rgba(196,149,106,0.2); }
     .section-sub-heading em { font-style: italic; color: var(--clay); }
-
-    .yoga-image { width: 100%; height: 380px; object-fit: cover; display: block; margin-bottom: 3rem; }
-    .yoga-card { background: var(--parchment); border: 1px solid rgba(196,149,106,0.25); padding: 3.5rem; margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    .yoga-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--bark-dark); line-height: 1.15; margin-bottom: 0.5rem; }
-    .yoga-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--warm-grey); margin-bottom: 1.5rem; }
-    .yoga-description { font-size: 0.95rem; line-height: 1.9; color: var(--warm-grey); margin-bottom: 1.2rem; }
 
     #faq { background: var(--parchment); }
     .faq-inner { max-width: 760px; margin: 0 auto; text-align: center; }
@@ -160,11 +167,11 @@
       .ritual-body { min-width: 0; }
       .ritual-description { overflow-wrap: break-word; }
       .mld-card { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem; }
-      .yoga-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+      .womb-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
       .treatment-menu { padding: 2rem 1.5rem; }
       .treatment-menu-grid { grid-template-columns: 1fr 1fr; }
       .rituals-image-banner { height: 220px; }
-      .yoga-image { height: 240px; }
+      .womb-image { height: 260px; }
     }
   </style>
 </head>
@@ -185,7 +192,7 @@
 <section id="home">
   <div class="hero-content">
     <img src="logo.png" alt="Nora Holistic Wellbeing" class="hero-logo"/>
-    <p class="hero-tagline">Creating glowing skin naturally, using ancient wisdom and transformational touch</p>
+    <p class="hero-tagline">Restoring women from the outside in — through ritual, touch, and ancient wisdom</p>
     <p class="hero-sub">Ladywell · South East London · Women Only</p>
     <div class="hero-divider"></div>
     <a href="#rituals" class="btn">Discover the Rituals</a>
@@ -198,9 +205,10 @@
       <p class="section-label">About Nora</p>
       <h2 class="section-heading">Ancient wisdom,<br/><em>transformational touch</em></h2>
       <div class="thin-rule"></div>
-<p>Welcome! At Nora Holistic Wellbeing we are passionate about making women feel their best. We don't just provide regular treatments — we provide full self-care rituals.</p>
-<p>The moment you step into the cosy Ladywell home clinic you will be greeted by the smell of warm Korean Jujube tea and incense, surrounded by lit candles, plenty of plants, and organic cotton and linen sheets that are always freshly washed. All facials include extended massages to the scalp and neck to help you release stress, and we always use organic oils and carefully sourced products.</p>
-<p>At the moment I offer <strong>holistic facials</strong>, <strong>lymphatic drainage massage</strong> and <strong>private yoga sessions</strong> for women only. If you have any questions please don't hesitate to get in touch.</p>
+      <p>Welcome! I am Hannah, the founder of Nora Holistic Wellbeing. I am passionate about making women feel their best. I don't just provide regular treatments - I provide full self-care rituals.</p>
+      <p>The moment you step into the cosy Ladywell home clinic you will be greeted by the smell of warm  tea and incense, surrounded by plenty of plants, and organic cotton and linen sheets that are always freshly washed.</p>
+      <p>I offer <strong>womb massage</strong>, <strong>lymphatic drainage massage</strong> and <strong>holistic facials</strong> for women only. Each treatment draws on a different tradition — Mizan therapy, Ayurveda, TCM, Kobido — but they share the same intention: helping the body remember how to heal.</p>
+      <p> To book a session with me or for any questions, please contact me directly via whatsap, insta or email. Contact details are below.<p> 
       <div class="about-contact-links">
         <a href="https://www.instagram.com/holisticnora" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
@@ -214,21 +222,21 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           WhatsApp us
         </a>
-        <a href="https://www.norawellbeing.com">
+        <a href="https://norawellbeing.com" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           norawellbeing.com
         </a>
       </div>
       <div class="training-badge">
-        <p>Fully certified and insured for all treatments offered. Training received from accredited institutions in <strong>London</strong> and <strong>Thailand</strong>.</p>
+        <p>Fully certified and insured for all treatments offered. Training received from accredited institutions in <strong>London</strong>, <strong>Thailand</strong> and <strong>Marrakech</strong>.</p>
       </div>
-      <span class="location-tag">Ladywell, SE London</span>
+      <div class="location-tag">Ladywell, SE London</div>
     </div>
-    <div class="about-visual reveal">
-      <img src="about.jpg" alt="Nora giving a holistic facial treatment" class="about-image"/>
+    <div class="reveal">
+      <img src="about.jpg" alt="Nora giving a holistic treatment" class="about-image"/>
       <div class="about-image-caption">
-        Ritualistic facials, to bring back your radiance — and a touch that reminds the body it already knows how to heal.
-        <div class="about-image-caption-sub">Nora · Holistic Wellbeing</div>
+        Ritualistic treatments, to bring back your radiance — and a touch that reminds the body it already knows how to heal.
+        <p class="about-image-caption-sub">Nora · Holistic Wellbeing</p>
       </div>
     </div>
   </div>
@@ -236,31 +244,167 @@
 
 <section id="rituals">
   <div class="rituals-inner">
+
     <div class="rituals-header reveal">
       <p class="section-label">The Rituals</p>
       <h2 class="section-heading">All <em>Treatments</em></h2>
       <div class="thin-rule"></div>
-      <p style="max-width:560px; margin:0 auto; color:var(--warm-grey); font-size:0.95rem; line-height:1.8;">More than a facial. Each ritual combines ancient Eastern wisdom with the art of touch — to release tension, restore radiance, and bring the face back to itself.</p>
+      <p style="font-size:0.9rem; color:var(--warm-grey); max-width:560px; margin:0 auto; line-height:1.9;">More than a treatment. Each ritual combines ancient wisdom with the art of touch — to restore, release, and return the body to itself.</p>
     </div>
 
-    <img src="rituals.jpg" alt="Holistic facial ritual tools" class="rituals-image-banner reveal"/>
+    <img src="rituals.jpg" alt="Holistic treatment tools" class="rituals-image-banner reveal"/>
 
+    <!-- TREATMENT MENU -->
     <div class="treatment-menu reveal">
       <p class="treatment-menu-title">Jump to a treatment</p>
       <div class="treatment-menu-grid">
+        <div class="treatment-menu-item"><a href="#womb-massage">Womb Massage — Mizan Therapy</a></div>
+        <div class="treatment-menu-item"><a href="#fertility-massage">Fertility Massage</a></div>
+        <div class="treatment-menu-item"><a href="#mld">Manual Lymphatic Drainage</a></div>
+        <div class="treatment-menu-item"><a href="#postpartum">Post-Partum MLD Massage</a></div>
+        <div class="treatment-menu-item"><a href="#postop">Post-Op Lymphatic Drainage</a></div>
         <div class="treatment-menu-item"><a href="#ritual-01">Clear &amp; Flow — Detox Facial</a></div>
         <div class="treatment-menu-item"><a href="#ritual-02">Lift &amp; Sculpt — Fusion Facial</a></div>
         <div class="treatment-menu-item"><a href="#ritual-03">Lift &amp; Detox — Full Ritual</a></div>
-        <div class="treatment-menu-item"><a href="#mld">Lymphatic Drainage Massage</a></div>
-        <div class="treatment-menu-item"><a href="#postpartum">Post-Partum MLD Massage</a></div>
-        <div class="treatment-menu-item"><a href="#postop">Post-Op Lymphatic Drainage</a></div>
-        <div class="treatment-menu-item"><a href="#yoga">Private Yoga Sessions</a></div>
       </div>
     </div>
 
-    <div class="reveal" style="margin-bottom:3rem;">
-      <p class="section-label">Holistic Facials</p>
+    <!-- WOMB MASSAGE SECTION HEADING -->
+    <h3 class="section-sub-heading reveal">Womb <em>Rituals</em></h3>
+
+    <!-- IMAGE: Mizan treatment hands on abdomen -->
+    <img src="womb_hero.png" alt="Mizan womb massage treatment — hands on abdomen" class="womb-image reveal"/>
+
+    <!-- WOMB MASSAGE CARD -->
+    <div class="womb-card reveal" id="womb-massage">
+      <div>
+        <p class="ritual-number">Womb Ritual · Mizan Therapy</p>
+        <h3 class="womb-heading">Womb<br/>Massage</h3>
+        <p class="womb-subtitle">Mizan abdominal therapy — rooted in ancient healing wisdom</p>
+        <div class="womb-price-block">
+          <p class="womb-price-label">Initial session — includes consultation</p>
+          <div class="womb-price">£120</div>
+          <div class="womb-duration">90 minutes</div>
+        </div>
+        <div class="womb-price-block">
+          <p class="womb-price-label">Follow-on sessions</p>
+          <div class="womb-price">£95</div>
+          <div class="womb-duration">75 minutes</div>
+        </div>
+        <br/>
+        <a href="https://square.link/u/OzsWrs5Y" target="_blank" class="btn" style="animation:none; opacity:1;">Book a session</a>
+      </div>
+      <div>
+        <p class="womb-description">A gentle, deeply restorative abdominal massage drawing on Mizan therapy — a tradition rooted in Mayan and ancient healing wisdom. The treatment works on the abdomen, sacrum, and lower back to encourage healthy blood flow to the uterus and surrounding organs, release tension held in the pelvic bowl, and support the body's natural rhythms.</p>
+        <p class="womb-description">In many healing traditions, sluggish circulation and tension in the pelvic region are understood to be at the root of a wide range of cyclical complaints. By warming the area, encouraging movement of stagnant blood, and gently supporting the positioning of the uterus, this treatment aims to restore flow where the body has become stuck.</p>
+        <p class="womb-best-for">Women come for this treatment when they experience:<br/>
+        painful or heavy periods · irregular cycles · pelvic tension and cramping · PMS and PMDD symptoms · bloating and digestive discomfort · low back pain linked to the cycle · postnatal recovery support</p>
+        <p class="womb-disclaimer">This is a holistic complementary therapy, not a medical treatment. Please consult your GP if you have a diagnosed condition such as endometriosis, adenomyosis, PCOS, or fibroids before booking.</p>
+      </div>
     </div>
+
+    <!-- FERTILITY MASSAGE CARD -->
+    <div class="womb-card reveal" id="fertility-massage" style="margin-top:2rem;">
+      <div>
+        <p class="ritual-number">Womb Ritual · Conception Support</p>
+        <h3 class="womb-heading">Fertility<br/>Massage</h3>
+        <p class="womb-subtitle">Abdominal therapy for reproductive wellbeing</p>
+        <div class="womb-price-block">
+          <p class="womb-price-label">Initial session — includes consultation</p>
+          <div class="womb-price">£120</div>
+          <div class="womb-duration">90 minutes</div>
+        </div>
+        <div class="womb-price-block">
+          <p class="womb-price-label">Follow-on sessions</p>
+          <div class="womb-price">£95</div>
+          <div class="womb-duration">75 minutes</div>
+        </div>
+        <br/>
+        <a href="https://square.link/u/OzsWrs5Y" target="_blank" class="btn" style="animation:none; opacity:1;">Book a session</a>
+      </div>
+      <div>
+        <p class="womb-description">A focused abdominal massage for women who are preparing their bodies for conception, supporting an IVF or IUI cycle, or coming off contraception and wanting to reconnect with their cycle.</p>
+        <p class="womb-description">The treatment works by encouraging circulation to the uterus and ovaries, releasing tension in the diaphragm and pelvis, and supporting the nervous system. Many women find it a valuable part of a broader approach to reproductive health — alongside acupuncture, nutrition, or medical fertility support.</p>
+        <p class="womb-description">This is not a fertility treatment and does not diagnose or resolve underlying medical causes of infertility. What it offers is a space for the body to receive deep, intentional care during what is often a physically and emotionally demanding time.</p>
+        <p class="womb-best-for">Women come for this when they are:<br/>
+        preparing for natural conception · supporting an IVF or IUI cycle · coming off the pill and rebalancing their cycle · dealing with irregular or absent periods · recovering from miscarriage and preparing to try again</p>
+        <p class="womb-disclaimer">Always consult your doctor or fertility specialist before booking if you are undergoing assisted reproduction.</p>
+      </div>
+    </div>
+
+    <!-- LYMPHATIC DRAINAGE SECTION HEADING -->
+    <h3 class="section-sub-heading reveal">Body <em>Treatments</em></h3>
+
+    <!-- MLD IMAGE -->
+    <img src="womb_detail.png" alt="Abdominal massage treatment" class="womb-image reveal" style="object-position: center 20%;"/>
+
+    <div class="mld-card reveal" id="mld">
+      <div>
+        <p class="ritual-number" style="color:var(--clay)">Body Treatment</p>
+        <h3 class="mld-heading">Manual Lymphatic<br/>Drainage Massage</h3>
+        <p class="mld-subtitle">Brazilian MLD technique · Bespoke &amp; Ayurvedic</p>
+        <p class="mld-description">Using the Brazilian MLD technique, this bespoke massage works on supporting the body's natural lymphatic flow and leaving you feeling lighter and smoother. The oil is heated and poured onto the stomach first to support comfort and ease.</p>
+        <p class="mld-description">The oil is packed with powerful Ayurvedic ingredients — turmeric, ashwagandha, and sesame oil — which deeply moisturise the skin and complement the massage beautifully.</p>
+        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure.</p>
+      </div>
+      <div>
+        <div class="mld-prices">
+          <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
+          <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
+        </div>
+        <p class="price-note">The 90-minute session can include either an express facial ritual (30 min) or an extended body massage — your choice.</p>
+        <br/>
+        <a href="https://square.link/u/OzsWrs5Y" target="_blank" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
+      </div>
+    </div>
+
+    <div class="mld-card reveal" id="postpartum" style="margin-top:2rem;">
+      <div>
+        <p class="ritual-number" style="color:var(--clay)">Body Treatment · Postnatal</p>
+        <h3 class="mld-heading">Post-Partum<br/>Lymphatic Drainage</h3>
+        <p class="mld-subtitle">Gentle · Restorative · Nourishing</p>
+        <p class="mld-description">A nurturing adaptation of the lymphatic drainage massage, designed with new mothers in mind. The same Brazilian MLD technique is used, with extra care and gentleness to support the body's natural recovery after birth.</p>
+        <p class="mld-description">The focus is on gentle, supportive touch that helps you feel restored, lighter, and cared for during the postnatal period.</p>
+        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure. Please consult your midwife or GP before booking if you have any concerns.</p>
+      </div>
+      <div>
+        <div class="mld-prices">
+          <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
+          <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
+        </div>
+        <br/>
+        <a href="https://square.link/u/OzsWrs5Y" target="_blank" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
+      </div>
+    </div>
+
+    <div class="mld-card reveal" id="postop" style="margin-top:2rem;">
+      <div>
+        <p class="ritual-number" style="color:var(--clay)">Body Treatment · Post-Operative</p>
+        <h3 class="mld-heading">Post-Op Lymphatic<br/>Drainage</h3>
+        <p class="mld-subtitle">Brazilian MLD · Organic Arnica Oil</p>
+        <p class="mld-description">Brazilian-style lymphatic drainage massage to help support the body's natural recovery after surgery and reduce the feeling of water retention. Organic arnica oil is used throughout to help soothe and nourish the skin during the healing process.</p>
+        <p class="mld-description">For best results, I recommend starting as soon as you are cleared by your surgeon and booking multiple sessions close together.</p>
+        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure. Always follow your surgeon's guidance before booking.</p>
+      </div>
+      <div>
+        <div class="mld-prices">
+          <div class="mld-price-item"><div class="mld-price-amount">£90</div><div class="mld-price-duration">60 minutes</div></div>
+          <div class="mld-price-item"><div class="mld-price-amount">£110</div><div class="mld-price-duration">90 minutes</div></div>
+        </div>
+        <div class="package-box">
+          <p class="package-box-title">Session Packages</p>
+          <div class="package-item"><span>3 × 60 min sessions</span><span style="color:var(--clay);">£210</span></div>
+          <div class="package-item"><span>5 × 60 min sessions</span><span style="color:var(--clay);">£300</span></div>
+        </div>
+        <br/>
+        <a href="https://square.link/u/OzsWrs5Y" target="_blank" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
+      </div>
+    </div>
+
+    <!-- FACIALS SECTION HEADING -->
+    <h3 class="section-sub-heading reveal">Holistic <em>Facials</em></h3>
+
+    <img src="rituals.jpg" alt="Holistic facial ritual tools" class="rituals-image-banner reveal" style="margin-bottom:3rem;"/>
 
     <div class="ritual-card reveal" id="ritual-01">
       <div class="ritual-meta">
@@ -325,98 +469,6 @@
       </div>
     </div>
 
-    <h3 class="section-sub-heading reveal">Body <em>Treatments</em></h3>
-
-    <div class="mld-card reveal" id="mld">
-      <div>
-        <p class="ritual-number" style="color:var(--clay)">Body Treatment</p>
-        <h3 class="mld-heading">Manual Lymphatic<br/>Drainage Massage</h3>
-        <p class="mld-subtitle">Brazilian MLD technique · Bespoke &amp; Ayurvedic</p>
-        <p class="mld-description">Using the Brazilian MLD technique, this bespoke massage works on supporting the body's natural lymphatic flow and leaving you feeling lighter and smoother. The oil is heated and poured onto the stomach first to support comfort and ease.</p>
-        <p class="mld-description">The oil is packed with powerful Ayurvedic ingredients — turmeric, ashwagandha, and sesame oil — which deeply moisturise the skin and complement the massage beautifully.</p>
-        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure.</p>
-      </div>
-      <div>
-        <div class="mld-prices">
-          <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
-          <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
-        </div>
-        <p class="price-note">The 90-minute session can include either an express facial ritual (30 min) or an extended body massage — your choice.</p>
-        <br/>
-        <a href="https://www.instagram.com/holisticnora" target="_blank" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
-      </div>
-    </div>
-
-    <div class="mld-card reveal" id="postpartum" style="margin-top:2rem;">
-      <div>
-        <p class="ritual-number" style="color:var(--clay)">Body Treatment · Postnatal</p>
-        <h3 class="mld-heading">Post-Partum<br/>Lymphatic Drainage</h3>
-        <p class="mld-subtitle">Gentle · Restorative · Nourishing</p>
-        <p class="mld-description">A nurturing adaptation of the lymphatic drainage massage, designed with new mothers in mind. The same Brazilian MLD technique is used, with extra care and gentleness to support the body's natural recovery after birth.</p>
-        <p class="mld-description">The focus is on gentle, supportive touch that helps you feel restored, lighter, and cared for during the postnatal period.</p>
-        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure. Please consult your midwife or GP before booking if you have any concerns.</p>
-      </div>
-      <div>
-        <div class="mld-prices">
-          <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
-          <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
-        </div>
-        <br/>
-        <a href="https://www.instagram.com/holisticnora" target="_blank" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
-      </div>
-    </div>
-
-    <div class="mld-card reveal" id="postop" style="margin-top:2rem;">
-      <div>
-        <p class="ritual-number" style="color:var(--clay)">Body Treatment · Post-Operative</p>
-        <h3 class="mld-heading">Post-Op Lymphatic<br/>Drainage</h3>
-        <p class="mld-subtitle">Brazilian MLD · Organic Arnica Oil</p>
-        <p class="mld-description">Brazilian-style lymphatic drainage massage to help support the body's natural recovery after surgery and reduce the feeling of water retention. Organic arnica oil is used throughout to help soothe and nourish the skin during the healing process.</p>
-        <p class="mld-description">For best results, I recommend starting as soon as you are cleared by your surgeon and booking multiple sessions close together.</p>
-        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure. Always follow your surgeon's guidance before booking.</p>
-      </div>
-      <div>
-        <div class="mld-prices">
-          <div class="mld-price-item"><div class="mld-price-amount">£90</div><div class="mld-price-duration">60 minutes</div></div>
-          <div class="mld-price-item"><div class="mld-price-amount">£110</div><div class="mld-price-duration">90 minutes</div></div>
-        </div>
-        <div class="package-box">
-          <p class="package-box-title">Session Packages</p>
-          <div class="package-item"><span>3 × 60 min sessions</span><span style="color:var(--clay);">£210</span></div>
-          <div class="package-item"><span>5 × 60 min sessions</span><span style="color:var(--clay);">£300</span></div>
-        </div>
-        <br/>
-        <a href="https://www.instagram.com/holisticnora" target="_blank" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
-      </div>
-    </div>
-
-    <h3 class="section-sub-heading reveal">Private <em>Yoga</em></h3>
-    <img src="yoga.jpg" alt="Private yoga session space" class="yoga-image reveal"/>
-
-    <div class="yoga-card reveal" id="yoga">
-      <div>
-        <p class="ritual-number">Private · 1-to-1 · Home Clinic</p>
-        <h3 class="yoga-heading">Hatha &amp;<br/>Yin Yoga</h3>
-        <p class="yoga-subtitle">A fully tailored session, just for you</p>
-        <p class="yoga-description">A curated yoga session designed entirely around your individual needs, in the calm and comfort of a private home clinic. Ideal for those who crave the restorative benefits of yoga without the noise of a crowded class.</p>
-        <p class="yoga-description">Each session weaves in essential oils, incense, breathwork and meditation — creating a truly immersive and personal experience. Bring a friend and split the cost if you'd like to share the ritual.</p>
-        <p class="yoga-description" style="font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--bark);">✦ Hatha Yoga · Yin Yoga · Breathwork · Meditation · Essential Oils · Incense</p>
-      </div>
-      <div>
-        <div class="ritual-price-block" style="margin-bottom:1rem;">
-          <div class="ritual-price">£40</div>
-          <div class="ritual-duration">60 minutes</div>
-        </div>
-        <div class="ritual-price-block" style="margin-bottom:1.5rem;">
-          <div class="ritual-price">£60</div>
-          <div class="ritual-duration">90 minutes</div>
-        </div>
-        <p style="font-size:0.78rem; color:var(--warm-grey); font-style:italic; font-family:'Cormorant Garamond',serif; line-height:1.6;">Prices can be split between two people if you'd like to bring a friend.</p>
-        <br/>
-        <a href="https://www.instagram.com/holisticnora" target="_blank" class="btn" style="animation:none; opacity:1;">Book a session</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -428,7 +480,7 @@
     <div class="faq-list reveal">
       <div class="faq-item">
         <p class="faq-question">What are your terms and conditions?</p>
-        <p class="faq-answer">A deposit is required to reserve your appointment. Cancellations with less than 24 hours' notice will forfeit the deposit.</p>
+        <p class="faq-answer">A deposit is required to reserve your appointment. Deposits are non-refundable but transferable with at least 48 hours' notice. Cancellations with less than 48 hours' notice will forfeit the deposit.</p>
       </div>
       <div class="faq-item">
         <p class="faq-question">Where are you based?</p>
@@ -437,11 +489,15 @@
       <div class="faq-item">
         <p class="faq-question">How can I book?</p>
         <p class="faq-answer">
-          Contact me through any of the following and I will send you a booking link:<br/><br/>
+          You can book directly using the booking link on each treatment, or contact me through any of the following:<br/><br/>
           Instagram: <a href="https://www.instagram.com/holisticnora" target="_blank">@holisticnora</a><br/>
           Email: <a href="mailto:hello@norawellbeing.com">hello@norawellbeing.com</a><br/>
           WhatsApp: <a href="https://wa.me/447776162455">07776 162 455</a>
         </p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">What should I expect from a womb massage consultation?</p>
+        <p class="faq-answer">Your initial womb massage session includes a detailed consultation covering your cycle history, general health, and what you're hoping to address. This is a confidential conversation and helps me tailor the treatment to you. The consultation is included in the initial session price of £120.</p>
       </div>
       <div class="faq-item">
         <p class="faq-question">Do you always use fresh towels?</p>
