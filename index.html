@@ -41,7 +41,6 @@
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--bark); font-family: 'Jost', sans-serif; font-weight: 200; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; transition: color 0.3s; }
     .nav-links a:hover { color: var(--clay); }
-
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.3rem; color: var(--bark); line-height: 0; }
 
     #home { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; background-image: url('hero.jpg'); background-size: cover; background-position: center 70%; }
@@ -91,9 +90,16 @@
     .treatment-menu-item a { color: var(--sand); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; line-height: 1.8; }
     .treatment-menu-item a:hover { color: var(--clay); }
 
+    .portrait-layout { display: grid; grid-template-columns: 2fr 3fr; gap: 3rem; align-items: start; margin-bottom: 2rem; }
+    .portrait-col { position: sticky; top: 120px; }
+    .portrait-img { width: 100%; display: block; }
+    .portrait-cards .womb-card { padding: 2.5rem; gap: 2rem; margin-bottom: 0; }
+    .portrait-cards .womb-card + .womb-card { margin-top: 2rem; }
+    .portrait-cards .mld-card { padding: 2.5rem; gap: 2rem; margin-top: 0; margin-bottom: 0; }
+    .portrait-cards .mld-card + .mld-card { margin-top: 2rem; }
+
     .womb-card { background: var(--parchment); border: 1px solid rgba(196,149,106,0.25); padding: 4rem; margin-bottom: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    .womb-image { width: 100%; height: 420px; object-fit: cover; object-position: center 38%; display: block; margin-bottom: 4rem; }
-    .womb-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--bark-dark); line-height: 1.15; margin-bottom: 0.5rem; }
+    .womb-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; color: var(--bark-dark); line-height: 1.15; margin-bottom: 0.5rem; }
     .womb-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--warm-grey); margin-bottom: 1.5rem; }
     .womb-description { font-size: 0.95rem; line-height: 1.9; color: var(--warm-grey); margin-bottom: 1.2rem; }
     .womb-best-for { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95rem; color: var(--moss); margin-bottom: 1.5rem; line-height: 1.8; }
@@ -120,7 +126,7 @@
     .ritual-includes strong { display: block; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin-bottom: 0.4rem; font-weight: 400; }
 
     .mld-card { background: var(--bark-dark); color: var(--sand); padding: 4rem; margin-top: 2rem; margin-bottom: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    .mld-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--sand); line-height: 1.15; margin-bottom: 0.5rem; }
+    .mld-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; color: var(--sand); line-height: 1.15; margin-bottom: 0.5rem; }
     .mld-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--clay); margin-bottom: 1.5rem; }
     .mld-description { font-size: 0.95rem; line-height: 1.9; color: rgba(212,184,150,0.8); margin-bottom: 1.2rem; }
     .mld-disclaimer { font-size: 0.75rem; font-style: italic; color: rgba(212,184,150,0.5); margin-bottom: 1.2rem; }
@@ -183,6 +189,10 @@
       .nav-links a { display: block; padding: 1rem 1.5rem; font-size: 0.72rem; }
       .about-inner { grid-template-columns: 1fr; gap: 3rem; }
       .about-image { height: 320px; }
+      .portrait-layout { grid-template-columns: 1fr; }
+      .portrait-col { position: static; }
+      .portrait-cards .womb-card,
+      .portrait-cards .mld-card { padding: 2rem; }
       .ritual-card { grid-template-columns: 1fr !important; gap: 2rem; }
       .ritual-card.reverse { grid-template-columns: 1fr !important; }
       .ritual-card.reverse .ritual-meta { order: 1 !important; }
@@ -195,7 +205,6 @@
       .treatment-menu { padding: 2rem 1.5rem; }
       .treatment-menu-grid { grid-template-columns: 1fr 1fr; }
       .rituals-image-banner { height: 220px; }
-      .womb-image { height: 260px; }
     }
   </style>
 </head>
@@ -283,7 +292,6 @@
 
     <img src="rituals.jpg" alt="Holistic treatment tools" class="rituals-image-banner reveal" loading="lazy"/>
 
-    <!-- TREATMENT MENU -->
     <div class="treatment-menu reveal">
       <p class="treatment-menu-title">Jump to a treatment</p>
       <div class="treatment-menu-grid">
@@ -298,110 +306,119 @@
       </div>
     </div>
 
-    <!-- WOMB MASSAGE SECTION HEADING -->
     <h3 class="section-sub-heading reveal">Womb <em>Rituals</em></h3>
 
-    <img src="womb_hero.jpg" alt="Mizan womb massage treatment — hands on abdomen" class="womb-image reveal" loading="lazy"/>
-
-    <!-- WOMB MASSAGE CARD -->
-    <div class="womb-card reveal" id="womb-massage">
-      <div>
-        <p class="ritual-number">Womb Ritual · Mizan Therapy</p>
-        <h3 class="womb-heading">Womb<br/>Massage</h3>
-        <p class="womb-subtitle">Mizan abdominal therapy — rooted in ancient healing wisdom</p>
-        <div class="womb-price-block">
-          <p class="womb-price-label">Initial session — includes consultation</p>
-          <div class="womb-price">£120</div>
-          <div class="womb-duration">90 minutes</div>
-        </div>
-        <div class="womb-price-block">
-          <p class="womb-price-label">Follow-on sessions</p>
-          <div class="womb-price">£95</div>
-          <div class="womb-duration">75 minutes</div>
-        </div>
-        <br/>
-        <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn" style="animation:none; opacity:1;">Book a session</a>
+    <div class="portrait-layout reveal">
+      <div class="portrait-col">
+        <img src="womb_hero.jpg" alt="Mizan womb massage — hands on abdomen" class="portrait-img" loading="lazy"/>
       </div>
-      <div>
-        <p class="womb-description">A gentle, deeply restorative abdominal massage drawing on Mizan therapy — a tradition rooted in Mayan and ancient healing wisdom. The treatment works on the abdomen, sacrum, and lower back to encourage healthy blood flow to the uterus and surrounding organs, release tension held in the pelvic bowl, and support the body's natural rhythms.</p>
-        <p class="womb-description">In many healing traditions, sluggish circulation and tension in the pelvic region are understood to be at the root of a wide range of cyclical complaints. By warming the area, encouraging movement of stagnant blood, and gently supporting the positioning of the uterus, this treatment aims to restore flow where the body has become stuck.</p>
-        <p class="womb-best-for">Women come for this treatment when they experience:<br/>
-        painful or heavy periods · irregular cycles · pelvic tension and cramping · PMS and PMDD symptoms · bloating and digestive discomfort · low back pain linked to the cycle · postnatal recovery support</p>
-        <p class="womb-disclaimer">This is a holistic complementary therapy, not a medical treatment. Please consult your GP if you have a diagnosed condition such as endometriosis, adenomyosis, PCOS, or fibroids before booking.</p>
+      <div class="portrait-cards">
+
+        <div class="womb-card" id="womb-massage">
+          <div>
+            <p class="ritual-number">Womb Ritual · Mizan Therapy</p>
+            <h3 class="womb-heading">Womb<br/>Massage</h3>
+            <p class="womb-subtitle">Mizan abdominal therapy — rooted in ancient healing wisdom</p>
+            <div class="womb-price-block">
+              <p class="womb-price-label">Initial session — includes consultation</p>
+              <div class="womb-price">£120</div>
+              <div class="womb-duration">90 minutes</div>
+            </div>
+            <div class="womb-price-block">
+              <p class="womb-price-label">Follow-on sessions</p>
+              <div class="womb-price">£95</div>
+              <div class="womb-duration">75 minutes</div>
+            </div>
+            <br/>
+            <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn" style="animation:none; opacity:1;">Book a session</a>
+          </div>
+          <div>
+            <p class="womb-description">A gentle, deeply restorative abdominal massage drawing on Mizan therapy — a tradition rooted in Mayan and ancient healing wisdom. The treatment works on the abdomen, sacrum, and lower back to encourage healthy blood flow to the uterus and surrounding organs, release tension held in the pelvic bowl, and support the body's natural rhythms.</p>
+            <p class="womb-description">In many healing traditions, sluggish circulation and tension in the pelvic region are understood to be at the root of a wide range of cyclical complaints. By warming the area, encouraging movement of stagnant blood, and gently supporting the positioning of the uterus, this treatment aims to restore flow where the body has become stuck.</p>
+            <p class="womb-best-for">Women come for this treatment when they experience:<br/>
+            painful or heavy periods · irregular cycles · pelvic tension and cramping · PMS and PMDD symptoms · bloating and digestive discomfort · low back pain linked to the cycle · postnatal recovery support</p>
+            <p class="womb-disclaimer">This is a holistic complementary therapy, not a medical treatment. Please consult your GP if you have a diagnosed condition such as endometriosis, adenomyosis, PCOS, or fibroids before booking.</p>
+          </div>
+        </div>
+
+        <div class="womb-card" id="fertility-massage">
+          <div>
+            <p class="ritual-number">Womb Ritual · Conception Support</p>
+            <h3 class="womb-heading">Fertility<br/>Massage</h3>
+            <p class="womb-subtitle">Abdominal therapy for reproductive wellbeing</p>
+            <div class="womb-price-block">
+              <p class="womb-price-label">Initial session — includes consultation</p>
+              <div class="womb-price">£120</div>
+              <div class="womb-duration">90 minutes</div>
+            </div>
+            <div class="womb-price-block">
+              <p class="womb-price-label">Follow-on sessions</p>
+              <div class="womb-price">£95</div>
+              <div class="womb-duration">75 minutes</div>
+            </div>
+            <br/>
+            <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn" style="animation:none; opacity:1;">Book a session</a>
+          </div>
+          <div>
+            <p class="womb-description">A focused abdominal massage for women who are preparing their bodies for conception, supporting an IVF or IUI cycle, or coming off contraception and wanting to reconnect with their cycle.</p>
+            <p class="womb-description">The treatment works by encouraging circulation to the uterus and ovaries, releasing tension in the diaphragm and pelvis, and supporting the nervous system. Many women find it a valuable part of a broader approach to reproductive health — alongside acupuncture, nutrition, or medical fertility support.</p>
+            <p class="womb-description">This is not a fertility treatment and does not diagnose or resolve underlying medical causes of infertility. What it offers is a space for the body to receive deep, intentional care during what is often a physically and emotionally demanding time.</p>
+            <p class="womb-best-for">Women come for this when they are:<br/>
+            preparing for natural conception · supporting an IVF or IUI cycle · coming off the pill and rebalancing their cycle · dealing with irregular or absent periods · recovering from miscarriage and preparing to try again</p>
+            <p class="womb-disclaimer">Always consult your doctor or fertility specialist before booking if you are undergoing assisted reproduction.</p>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- FERTILITY MASSAGE CARD -->
-    <div class="womb-card reveal" id="fertility-massage" style="margin-top:2rem;">
-      <div>
-        <p class="ritual-number">Womb Ritual · Conception Support</p>
-        <h3 class="womb-heading">Fertility<br/>Massage</h3>
-        <p class="womb-subtitle">Abdominal therapy for reproductive wellbeing</p>
-        <div class="womb-price-block">
-          <p class="womb-price-label">Initial session — includes consultation</p>
-          <div class="womb-price">£120</div>
-          <div class="womb-duration">90 minutes</div>
-        </div>
-        <div class="womb-price-block">
-          <p class="womb-price-label">Follow-on sessions</p>
-          <div class="womb-price">£95</div>
-          <div class="womb-duration">75 minutes</div>
-        </div>
-        <br/>
-        <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn" style="animation:none; opacity:1;">Book a session</a>
-      </div>
-      <div>
-        <p class="womb-description">A focused abdominal massage for women who are preparing their bodies for conception, supporting an IVF or IUI cycle, or coming off contraception and wanting to reconnect with their cycle.</p>
-        <p class="womb-description">The treatment works by encouraging circulation to the uterus and ovaries, releasing tension in the diaphragm and pelvis, and supporting the nervous system. Many women find it a valuable part of a broader approach to reproductive health — alongside acupuncture, nutrition, or medical fertility support.</p>
-        <p class="womb-description">This is not a fertility treatment and does not diagnose or resolve underlying medical causes of infertility. What it offers is a space for the body to receive deep, intentional care during what is often a physically and emotionally demanding time.</p>
-        <p class="womb-best-for">Women come for this when they are:<br/>
-        preparing for natural conception · supporting an IVF or IUI cycle · coming off the pill and rebalancing their cycle · dealing with irregular or absent periods · recovering from miscarriage and preparing to try again</p>
-        <p class="womb-disclaimer">Always consult your doctor or fertility specialist before booking if you are undergoing assisted reproduction.</p>
-      </div>
-    </div>
-
-    <!-- LYMPHATIC DRAINAGE SECTION HEADING -->
     <h3 class="section-sub-heading reveal">Body <em>Treatments</em></h3>
 
-    <!-- MLD IMAGE -->
-    <img src="womb_detail.jpg" alt="Abdominal massage treatment" class="womb-image reveal" loading="lazy" style="object-position: center 45%;"/>
+    <div class="portrait-layout reveal">
+      <div class="portrait-col">
+        <img src="womb_detail.jpg" alt="Abdominal massage treatment" class="portrait-img" loading="lazy"/>
+      </div>
+      <div class="portrait-cards">
 
-    <div class="mld-card reveal" id="mld">
-      <div>
-        <p class="ritual-number" style="color:var(--clay)">Body Treatment</p>
-        <h3 class="mld-heading">Manual Lymphatic<br/>Drainage Massage</h3>
-        <p class="mld-subtitle">Brazilian MLD technique · Bespoke &amp; Ayurvedic</p>
-        <p class="mld-description">Using the Brazilian MLD technique, this bespoke massage works on supporting the body's natural lymphatic flow and leaving you feeling lighter and smoother. The oil is heated and poured onto the stomach first to support comfort and ease.</p>
-        <p class="mld-description">The oil is packed with powerful Ayurvedic ingredients — turmeric, ashwagandha, and sesame oil — which deeply moisturise the skin and complement the massage beautifully.</p>
-        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure.</p>
-      </div>
-      <div>
-        <div class="mld-prices">
-          <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
-          <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
+        <div class="mld-card" id="mld">
+          <div>
+            <p class="ritual-number" style="color:var(--clay)">Body Treatment</p>
+            <h3 class="mld-heading">Manual Lymphatic<br/>Drainage Massage</h3>
+            <p class="mld-subtitle">Brazilian MLD technique · Bespoke &amp; Ayurvedic</p>
+            <p class="mld-description">Using the Brazilian MLD technique, this bespoke massage works on supporting the body's natural lymphatic flow and leaving you feeling lighter and smoother. The oil is heated and poured onto the stomach first to support comfort and ease.</p>
+            <p class="mld-description">The oil is packed with powerful Ayurvedic ingredients — turmeric, ashwagandha, and sesame oil — which deeply moisturise the skin and complement the massage beautifully.</p>
+            <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure.</p>
+          </div>
+          <div>
+            <div class="mld-prices">
+              <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
+              <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
+            </div>
+            <p class="price-note">The 90-minute session can include either an express facial ritual (30 min) or an extended body massage — your choice.</p>
+            <br/>
+            <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
+          </div>
         </div>
-        <p class="price-note">The 90-minute session can include either an express facial ritual (30 min) or an extended body massage — your choice.</p>
-        <br/>
-        <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
-      </div>
-    </div>
 
-    <div class="mld-card reveal" id="postpartum" style="margin-top:2rem;">
-      <div>
-        <p class="ritual-number" style="color:var(--clay)">Body Treatment · Postnatal</p>
-        <h3 class="mld-heading">Post-Partum<br/>Lymphatic Drainage</h3>
-        <p class="mld-subtitle">Gentle · Restorative · Nourishing</p>
-        <p class="mld-description">A nurturing adaptation of the lymphatic drainage massage, designed with new mothers in mind. The same Brazilian MLD technique is used, with extra care and gentleness to support the body's natural recovery after birth.</p>
-        <p class="mld-description">The focus is on gentle, supportive touch that helps you feel restored, lighter, and cared for during the postnatal period.</p>
-        <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure. Please consult your midwife or GP before booking if you have any concerns.</p>
-      </div>
-      <div>
-        <div class="mld-prices">
-          <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
-          <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
+        <div class="mld-card" id="postpartum">
+          <div>
+            <p class="ritual-number" style="color:var(--clay)">Body Treatment · Postnatal</p>
+            <h3 class="mld-heading">Post-Partum<br/>Lymphatic Drainage</h3>
+            <p class="mld-subtitle">Gentle · Restorative · Nourishing</p>
+            <p class="mld-description">A nurturing adaptation of the lymphatic drainage massage, designed with new mothers in mind. The same Brazilian MLD technique is used, with extra care and gentleness to support the body's natural recovery after birth.</p>
+            <p class="mld-description">The focus is on gentle, supportive touch that helps you feel restored, lighter, and cared for during the postnatal period.</p>
+            <p class="mld-disclaimer">This is a holistic treatment, not a medical procedure. Please consult your midwife or GP before booking if you have any concerns.</p>
+          </div>
+          <div>
+            <div class="mld-prices">
+              <div class="mld-price-item"><div class="mld-price-amount">£80</div><div class="mld-price-duration">60 minutes</div></div>
+              <div class="mld-price-item"><div class="mld-price-amount">£100</div><div class="mld-price-duration">90 minutes</div></div>
+            </div>
+            <br/>
+            <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
+          </div>
         </div>
-        <br/>
-        <a href="https://wa.me/447776162455" target="_blank" rel="noopener noreferrer" class="btn btn-clay" style="animation:none; opacity:1;">Book a session</a>
+
       </div>
     </div>
 
@@ -429,7 +446,6 @@
       </div>
     </div>
 
-    <!-- FACIALS SECTION HEADING -->
     <h3 class="section-sub-heading reveal">Holistic <em>Facials</em></h3>
 
     <img src="rituals.jpg" alt="Holistic facial ritual tools" class="rituals-image-banner reveal" loading="lazy" style="margin-bottom:3rem;"/>
@@ -568,7 +584,6 @@
 </footer>
 
 <script>
-  // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -577,7 +592,6 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // Hamburger menu
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.getElementById('nav-links');
   hamburger.addEventListener('click', () => {
@@ -591,7 +605,6 @@
     });
   });
 
-  // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.faq-question');
     question.addEventListener('click', () => {
