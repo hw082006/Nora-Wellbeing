@@ -16,20 +16,18 @@ if (hamburger && navLinks) {
     hamburger.setAttribute('aria-expanded', isOpen);
   });
 
-  // On mobile, tapping the "Offerings" trigger expands its submenu instead
-  // of navigating away; on desktop the CSS :hover/:focus-within handles it.
+  // Clicking "Offerings" expands/collapses its submenu rather than
+  // navigating anywhere — it's a <button>, not a link, on every screen
+  // size, so hover (desktop) and this click toggle (any device) both work.
   const dropdownTrigger = document.querySelector('.has-dropdown > .dropdown-trigger');
   if (dropdownTrigger) {
-    dropdownTrigger.addEventListener('click', (e) => {
-      if (window.matchMedia('(max-width: 768px)').matches) {
-        e.preventDefault();
-        dropdownTrigger.parentElement.classList.toggle('expanded');
-      }
+    dropdownTrigger.addEventListener('click', () => {
+      const isExpanded = dropdownTrigger.parentElement.classList.toggle('expanded');
+      dropdownTrigger.setAttribute('aria-expanded', isExpanded);
     });
   }
 
   navLinks.querySelectorAll('a').forEach(link => {
-    if (link === dropdownTrigger) return;
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
@@ -43,5 +41,25 @@ document.querySelectorAll('.faq-item').forEach(item => {
   question.addEventListener('click', () => {
     const isOpen = item.classList.toggle('open');
     question.setAttribute('aria-expanded', isOpen);
+  });
+});
+
+// Generic accordion (e.g. retreat "what's included" list)
+document.querySelectorAll('.accordion-item').forEach(item => {
+  const question = item.querySelector('.accordion-question');
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.toggle('open');
+    question.setAttribute('aria-expanded', isOpen);
+  });
+});
+
+// "Read more" text truncation (e.g. long retreat block copy)
+document.querySelectorAll('.text-collapse-toggle').forEach(btn => {
+  const wrap = document.getElementById(btn.getAttribute('aria-controls'));
+  if (!wrap) return;
+  btn.addEventListener('click', () => {
+    const isExpanded = wrap.classList.toggle('expanded');
+    btn.textContent = isExpanded ? 'Show Less' : 'Read More';
+    btn.setAttribute('aria-expanded', isExpanded);
   });
 });
