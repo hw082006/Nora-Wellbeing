@@ -119,6 +119,13 @@ section { padding: 7rem 2rem; }
 .about-image-caption-sub { font-family: 'Jost', sans-serif; font-style: normal; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); margin-top: 0.8rem; }
 .location-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--moss); margin-top: 2rem; }
 .location-tag::before { content: '◎'; font-size: 0.8rem; }
+.about-lede { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; color: var(--bark); line-height: 1.7; margin-bottom: 1.5rem; }
+.about-offer { margin-bottom: 1.7rem; padding-left: 1.1rem; border-left: 2px solid var(--sand); }
+.about-offer-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 1.15rem; color: var(--clay); margin-bottom: 0.5rem; }
+.about-offer p { margin-bottom: 0; }
+.about-cta-line { font-size: 0.97rem; color: var(--warm-grey); }
+.about-cta-line a { color: var(--bark); }
+
 .about-contact-links { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .about-contact-links a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--clay); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.08em; transition: color 0.3s; }
 .about-contact-links a:hover { color: var(--bark); }
