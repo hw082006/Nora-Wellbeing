@@ -204,7 +204,7 @@ section { padding: 7rem 2rem; }
 .accordion-question::after { content: '+'; font-size: 1rem; color: var(--clay); flex-shrink: 0; transition: transform 0.35s ease; }
 .accordion-item.open .accordion-question::after { transform: rotate(45deg); }
 .accordion-answer-wrap { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.accordion-item.open .accordion-answer-wrap { max-height: 300px; }
+.accordion-item.open .accordion-answer-wrap { max-height: 700px; }
 .accordion-answer { font-size: 0.9rem; line-height: 1.8; color: var(--warm-grey); padding-bottom: 1.1rem; }
 
 .retreat-gallery { background-color: var(--parchment); background-image: var(--grain); }
