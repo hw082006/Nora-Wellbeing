@@ -11,3 +11,7 @@
 - **Decided:** Added the bougainvillea villa photo as the first slide and the sunset valley view as the last slide in the venue strip.
 - **Why:** User's chosen order (arrive at the villa, see the rooms, end on the view).
 - **Detail:** The villa photo is wider than the others, so it is cropped slightly at the sides (4:3) to match the bedroom photos.
+
+## 2026-10-13: Home page "What I Offer" photos
+- **Decided:** Somatic Treatments box uses `treatment-room.jpg` (massage table), Retreats box uses `IMG_9309.JPG` (olive grove walk), Digital Consultancy box uses `digital-consultancy.jpg` (laptop session) and no longer says "Coming soon".
+- **Replaced:** `womb_hero.jpg` and `yoga.jpg` on the home page (files kept, still used elsewhere or available).
