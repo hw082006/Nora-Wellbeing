@@ -15,3 +15,4 @@
 ## 2026-10-13: Home page "What I Offer" photos
 - **Decided:** Somatic Treatments box uses `treatment-room.jpg` (massage table), Retreats box uses `IMG_9309.JPG` (olive grove walk), Digital Consultancy box uses `digital-consultancy.jpg` (laptop session) and no longer says "Coming soon".
 - **Replaced:** `womb_hero.jpg` and `yoga.jpg` on the home page (files kept, still used elsewhere or available).
+- **Follow-up:** Retreats box now uses `olive-grove-walk.jpg`, a resized copy of `IMG_9309.JPG` (900x1600, about 340KB instead of 1MB) for faster loading on phones. The original is kept in the repo.
