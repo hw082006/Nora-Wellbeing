@@ -27,3 +27,8 @@
 - **Swaps:** open to any treatment or service.
 - **Rejected:** digital guides section (partly unreleased), linking out to the separate Digital Solutions site, full copy of that site (option A), short summary page (option C).
 - **Correction:** Sites are hosted on GitHub Pages, not Netlify. Complete Presence includes the Premium website, not Standard.
+
+## 2026-10-13: About page photo fixed
+- **Problem:** Renaming `about.jpg.png` to `about.jpg` on the GitHub website replaced the image with a blank 2-byte text file, so the About photo disappeared.
+- **Fix:** Restored the uploaded photo (wicker peacock chair) from git history, saved as a real JPG (about 280KB instead of 2.5MB PNG). Updated alt text to match the photo.
+- **Lesson:** Don't rename image files in the GitHub web editor. Upload them with the right name, or ask Claude to do it.
