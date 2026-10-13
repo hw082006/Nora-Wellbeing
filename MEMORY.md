@@ -16,3 +16,13 @@
 - **Decided:** Somatic Treatments box uses `treatment-room.jpg` (massage table), Retreats box uses `IMG_9309.JPG` (olive grove walk), Digital Consultancy box uses `digital-consultancy.jpg` (laptop session) and no longer says "Coming soon".
 - **Replaced:** `womb_hero.jpg` and `yoga.jpg` on the home page (files kept, still used elsewhere or available).
 - **Follow-up:** Retreats box now uses `olive-grove-walk.jpg`, a resized copy of `IMG_9309.JPG` (900x1600, about 340KB instead of 1MB) for faster loading on phones. The original is kept in the repo.
+
+## 2026-10-13: Digital Consultancy page built
+- **Decided:** Replaced the "Coming soon" `digital-consultancy.html` with a full offer page (option B, focused). Content adapted from the Nora Digital Solutions site. Home page box and all menus link here (no link to the separate Digital Solutions site).
+- **Sections:** intro (user's own pitch, "your web presence is your business card"), at-a-glance band, why I do this + 3 statistics, 4 website packages, swaps, 1-1 coaching, 4-step process, past work, WhatsApp contact.
+- **Pricing:** Basic £100-£150, Standard £200-£250, Premium £300-£350, new Complete Presence £400 (Standard website + Instagram + Google Business Profile). Coaching £50 / £120 for 3. Updates: 2 free, then £10 or £40 for 5.
+- **Wording:** "No monthly website fees" instead of "free forever"; domain noted as a small yearly cost.
+- **Kept on user's call:** the 3 statistics (originally AI-written, sources not verified).
+- **Contact:** WhatsApp. **Audience:** open to men and women; this page's footer says "Digital services open to everyone" instead of "Women Only".
+- **Swaps:** open to any treatment or service.
+- **Rejected:** digital guides section (partly unreleased), linking out to the separate Digital Solutions site, full copy of that site (option A), short summary page (option C).
