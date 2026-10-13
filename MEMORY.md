@@ -20,9 +20,10 @@
 ## 2026-10-13: Digital Consultancy page built
 - **Decided:** Replaced the "Coming soon" `digital-consultancy.html` with a full offer page (option B, focused). Content adapted from the Nora Digital Solutions site. Home page box and all menus link here (no link to the separate Digital Solutions site).
 - **Sections:** intro (user's own pitch, "your web presence is your business card"), at-a-glance band, why I do this + 3 statistics, 4 website packages, swaps, 1-1 coaching, 4-step process, past work, WhatsApp contact.
-- **Pricing:** Basic £100-£150, Standard £200-£250, Premium £300-£350, new Complete Presence £400 (Standard website + Instagram + Google Business Profile). Coaching £50 / £120 for 3. Updates: 2 free, then £10 or £40 for 5.
+- **Pricing:** Basic £100-£150, Standard £200-£250, Premium £300-£350, new Complete Presence £400 (Premium website + Instagram + Google Business Profile). Coaching £50 / £120 for 3. Updates: 2 free, then £10 or £40 for 5.
 - **Wording:** "No monthly website fees" instead of "free forever"; domain noted as a small yearly cost.
 - **Kept on user's call:** the 3 statistics (originally AI-written, sources not verified).
 - **Contact:** WhatsApp. **Audience:** open to men and women; this page's footer says "Digital services open to everyone" instead of "Women Only".
 - **Swaps:** open to any treatment or service.
 - **Rejected:** digital guides section (partly unreleased), linking out to the separate Digital Solutions site, full copy of that site (option A), short summary page (option C).
+- **Correction:** Sites are hosted on GitHub Pages, not Netlify. Complete Presence includes the Premium website, not Standard.
